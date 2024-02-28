@@ -1,4 +1,40 @@
-
-   h2 {
-        color: green
-    }
+.photo{
+    transition: all 0.3s;
+}
+.photo:hover{
+    transform: scale(1.10);
+}
+h2{
+    color: salmon;
+    padding: 4%;
+}
+.img{
+    transition: all 0.3s;
+}
+.img:hover{
+    transform: scale(1.15);
+}
+.about{
+    border-radius: 30px;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: salmon;
+}
+.carousel-indicators li {
+    border-color: salmon;
+}
+.carousel-indicators li.active {
+    background-color: salmon;
+}
+.item {
+    padding-left: 20%;
+}
+.logo-small{
+    color: salmon;
+    font-size: 50px;
+}
+.logo {
+    color: salmon;
+    font-size: 100px;
+}
