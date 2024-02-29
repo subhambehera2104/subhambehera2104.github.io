@@ -5,7 +5,7 @@
     transform: scale(1.10);
 }
 h2{
-    color: salmon;
+    color:  #f4511e;
     padding: 4%;
 }
 .img{
@@ -19,22 +19,22 @@ h2{
 }
 .carousel-control.right, .carousel-control.left {
     background-image: none;
-    color: salmon;
+    color:  #f4511e;
 }
 .carousel-indicators li {
-    border-color: salmon;
+    border-color:  #f4511e;
 }
 .carousel-indicators li.active {
-    background-color: salmon;
+    background-color:  #f4511e;
 }
 .item {
     padding-left: 20%;
 }
 .logo-small{
-    color: salmon;
+    color:  #f4511e;
     font-size: 50px;
 }
 .logo {
-    color: salmon;
+    color:  #f4511e;
     font-size: 100px;
 }
