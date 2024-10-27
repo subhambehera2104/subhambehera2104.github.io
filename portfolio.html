@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        body {
+            background-color: rgb(228, 234, 240);
+            padding: 1%;
+        }
+        .portfolio {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2%;
+            margin-bottom: 30px; 
+            transition: transform 0.3s; 
+            position: relative; /* For the overlay effect */
+        }
+        .portfolio:hover {
+            transform: scale(1.02); 
+            box-shadow: 0 4px 20px 5px #888888;
+        }
+        .p-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s;
+        }
+        .gallery-grid1:hover .p-mask {
+            opacity: 1; /* Show on hover */
+        }
+        /* Additional margin between portfolio items */
+        .col-md-8.col-lg-4 {
+            margin:0; /* Vertical margin */
+        }
+        .heading{
+            background: linear-gradient(to top, #fb7478, #ffb5a1, #ff8361, #f4511e, #00fffb);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            color: #f4511e;
+            font-size: 90px;
+        }
+        @keyframes heading {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .img-fluid{
+            border-radius: 8px;
+        }
+        @import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
+        
+        *, *:after, *:before {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .svg-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        svg {
+            path {
+                transition: .1s;
+            }
+            
+            &:hover path {
+                d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
+            }
+        }
+        h1 {
+            font-weight: 400;
+        }
+        
+        header {
+            color: #fff;
+            padding-top: 10vw;
+            padding-bottom: 30vw;
+            text-align: center;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: #00c6d6;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+        }
+        
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-arrow-left text-start">HOME</span></a>
+            </div>
+    </nav>
+    <div class="svg-container">
+        <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
+        <svg viewbox="0 0 800 400" class="svg">
+            <path id="curve" fill="#50c6d8" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
+            </path>
+        </svg>
+    </div>
+    
+    <header>
+        <div class="text-center">
+            <b><p class="heading">My Portfolio</p></b>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-4" data-aos="fade-right">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="images/web4.png" alt=" " class="img-fluid d-block mx-auto" />
+                        <div class="p-mask">
+                            <h4>Personal</h4>
+                            <p>This is my personal portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-up">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="images/project1.png" alt=" " class="img-fluid d-block mx-auto" />
+                        <div class="p-mask">
+                            <h4>Classy resume</h4>
+                            <p>This my classy resume portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-left">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="images/project2.png" alt=" " class="img-fluid d-block mx-auto" />
+                        <div class="p-mask">
+                            <h4>Personal</h4>
+                            <p>This is my first personal portfolio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-right">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="images/web5.png" alt=" " class="img-fluid d-block mx-auto" style="height: 200px; width: 300px;" />
+                        <div class="p-mask">
+                            <h4>E-commerce</h4>
+                            <p>This is my eCommerce portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-up">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="images/web6.png" alt=" " class="img-fluid d-block mx-auto" style="height: 200px;" />
+                        <div class="p-mask">
+                            <a href="https://www.figma.com/proto/PyFNe8UIKZEavsn9YcB8rk/Instagram--mobile-app?node-id=132-115&node-type=canvas&t=tBs0Li3HLAwelF1q-0&scaling=scale-down&content-scaling=fixed&page-id=132%3A71&starting-point-node-id=265%3A20">
+                                <h4>Instagram</h4>
+                            </a>
+                            <p>UI/UX Design of Instagram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-left">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="https://i.pinimg.com/564x/3b/6f/79/3b6f7928a8f1746554ebac7228c8458f.jpg" alt=" " class="img-fluid d-block mx-auto" style="height: 200px; width: 90%;" />
+                        <div class="p-mask">
+                            <h4>Tample</h4>
+                            <p>UI/UX Design of Tample trvel applay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-right">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="https://i.pinimg.com/474x/9e/0e/cf/9e0ecf924d14f0a661fbbe0e12ed6d14.jpg" alt=" " class="img-fluid d-block mx-auto" style="height: 200px; width: 80%;" />
+                        <div class="p-mask">
+                            <h4>Boot shopting</h4>
+                            <p>UI/UX Design of boot shopting for e-commerce</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-up">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="https://i.pinimg.com/474x/dd/51/e9/dd51e92f0cadf374b5fb82a4d68b0323.jpg" alt=" " class="img-fluid d-block mx-auto" style="height: 200px; width: 80%;" />
+                        <div class="p-mask">
+                            <h4>House design</h4>
+                            <p>UI/UX Design for House design ideas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-left">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="https://i.pinimg.com/originals/e5/3b/58/e53b5845b10221d589e9623234eb582b.gif" alt=" " class="img-fluid d-block mx-auto" style="height: 200px; width: 80%;" />
+                        <div class="p-mask">
+                            <h4>Button Design</h4>
+                            <p>UI/UX button design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-right">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="https://i.pinimg.com/474x/8e/8a/29/8e8a292b384c8339e5d8014347e5eeec.jpg" alt=" " class="img-fluid d-block mx-auto" style="height: 200px; width: 40%;" />
+                        <div class="p-mask">
+                            <h4>Canva Editing</h4>
+                            <p>Canva 3d text editing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-up">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="https://i.pinimg.com/474x/70/96/b5/7096b51c52aa67542d0608a353fed99b.jpg" alt=" " class="img-fluid d-block mx-auto" style="height: 200px; width: 40%;" />
+                        <div class="p-mask">
+                            <h4>Canva frame effect</h4>
+                            <p>Canva frame effect editing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-4" data-aos="fade-left">
+                <div class="portfolio">
+                    <div class="gallery-grid1">
+                        <img src="https://i.pinimg.com/474x/3d/86/b3/3d86b34210468a25be8cafd5d9dec630.jpg" alt=" " class="img-fluid d-block mx-auto" style="height: 200px; width: 40%;" />
+                        <div class="p-mask">
+                            <h4>Canva text effect</h4>
+                            <p>Canva text effect editing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="cpy-right text-center">
+                <p class="text-white">© 2024 Subham Behera. All rights reserved | Design by
+                    <a href="http://github.com/subhambehera2104/" class="text-dark font-weight-bold">Subham Behera</a>
+                </p>
+            </div>
+        </div>
+    </footer>  
+</body>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- Initialize AOS -->
+<script>
+    AOS.init({
+        duration: 2000, // Animation duration in milliseconds
+        offset: 30, // Offset from the top of the page when animation starts
+        easing: 'ease-in-out', // Easing function for smooth transition
+    });
+    
+    (function() {
+        // Variables
+        var $curve = document.getElementById("curve");
+        var last_known_scroll_position = 0;
+        var defaultCurveValue = 350;
+        var curveRate = 3;
+        var ticking = false;
+        var curveValue;
+        
+        // Handle the functionality
+        function scrollEvent(scrollPos) {
+            if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
+                curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
+                $curve.setAttribute(
+                "d",
+                "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z"
+                );
+            }
+        }
+        
+        // Scroll Listener
+        // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
+        window.addEventListener("scroll", function(e) {
+            last_known_scroll_position = window.scrollY;
+            
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    scrollEvent(last_known_scroll_position);
+                    ticking = false;
+                });
+            }
+            
+            ticking = true;
+        });
+    })();
+</script>
+</body>
+</html>
